@@ -1,7 +1,9 @@
 import React from "react";
 import "./login.scss";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="login">
       <form>
@@ -15,7 +17,9 @@ const Login = () => {
           placeholder="Şifrenizi giriniz..."
         />
         <button>Giriş</button>
-        <p className="go-register">Hesabım Yok!</p>
+        <p className="go-register" onClick={() => navigate("/register")}>
+          Hesabım Yok!
+        </p>
       </form>
     </div>
   );
