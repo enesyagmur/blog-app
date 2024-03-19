@@ -1,19 +1,14 @@
 .home {
   width: 100%;
-  height: calc(100% - 50px);
+  min-height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   .home-main {
     width: 100%;
     min-height: calc(100vh - 550px);
+    max-height: 100%;
     display: flex;
     justify-content: space-evenly;
     margin-top: 25px;
-
-    .left {
-      width: 70%;
-      height: 800px;
-      background-color: rebeccapurple;
-    }
   }
 }

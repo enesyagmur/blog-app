@@ -1,5 +1,9 @@
 import React from "react";
 import "./sidebar.scss";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaPinterestSquare } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
 
 const Sidebar = () => {
   return (
@@ -24,6 +28,13 @@ const Sidebar = () => {
           <p>Tasarım</p>
           <p>Sağlık</p>
           <p>Hayat</p>
+        </div>
+        <p className="title">SOSYAL MEDYA</p>
+        <div className="social-media">
+          <FaFacebookSquare className="social-media-icon" />
+          <FaSquareInstagram className="social-media-icon" />
+          <FaPinterestSquare className="social-media-icon" />
+          <FaSquareTwitter className="social-media-icon" />
         </div>
       </div>
     </div>
