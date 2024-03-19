@@ -4,13 +4,18 @@ import "./login.scss";
 const Login = () => {
   return (
     <div className="login">
-      <p className="login-title">Giriş</p>
       <form>
+        <p className="form-title">Giriş</p>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" placeholder="Mailinizi giriniz..." />
         <label htmlFor="password">Şifre</label>
-        <input type="password" id="password" />
+        <input
+          type="password"
+          id="password"
+          placeholder="Şifrenizi giriniz..."
+        />
         <button>Giriş</button>
+        <p className="go-register">Hesabım Yok!</p>
       </form>
     </div>
   );
