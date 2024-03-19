@@ -1,4 +1,4 @@
-.login {
+.register {
   width: 100%;
   height: calc(100vh - 50px);
   background: linear-gradient(
@@ -18,7 +18,7 @@
     flex-direction: column;
 
     width: 250px;
-    height: 340px;
+    height: 400px;
     .form-title {
       font-size: 45px;
     }
@@ -41,7 +41,8 @@
       text-align: center;
       border-radius: 10px;
       border: none;
-      background-color: lightcoral;
+      background-color: teal;
+
       color: white;
       cursor: pointer;
     }
