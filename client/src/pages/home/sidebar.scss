@@ -1,0 +1,51 @@
+.sidebar {
+  width: 25%;
+  height: 100%;
+  background-color: #fdfbfb;
+  display: flex;
+  justify-content: center;
+  .sidebar-main {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid rgb(66, 65, 65);
+      border-bottom: 1px solid rgb(66, 65, 65);
+      margin-top: 20px;
+    }
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-top: 30px;
+    }
+    .explain {
+      width: 90%;
+      height: 150px;
+      text-align: start;
+      margin-top: 30px;
+    }
+    .categories {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      p {
+        height: 20px;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
