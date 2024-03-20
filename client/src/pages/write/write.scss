@@ -5,14 +5,28 @@
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
-  position: relative;
 
-  img {
+  label {
     width: 75%;
-    border-radius: 10px;
     height: 300px;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .icon {
+      position: absolute;
+      font-size: 50px;
+      color: lightcoral;
+      cursor: pointer;
+    }
   }
+
   .title {
     width: 75%;
     height: 30px;
@@ -21,13 +35,7 @@
     outline: none;
     font-size: 25px;
   }
-  .title-icon {
-    position: absolute;
-    font-size: 30px;
-    left: 145px;
-    top: 418px;
-    color: gray;
-  }
+
   textarea {
     width: 75%;
     margin-top: 10px;
