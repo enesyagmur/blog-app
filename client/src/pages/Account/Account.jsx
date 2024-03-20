@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../../components/navbar/Sidebar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import UpdateUser from "./UpdateUser";
 import "./account.scss";
 

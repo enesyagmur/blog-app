@@ -1,0 +1,57 @@
+.write {
+  width: 100%;
+  min-height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  position: relative;
+
+  img {
+    width: 75%;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .title {
+    width: 75%;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+  }
+  .title-icon {
+    position: absolute;
+    font-size: 30px;
+    left: 145px;
+    top: 418px;
+    color: gray;
+  }
+  textarea {
+    width: 75%;
+    margin-top: 10px;
+    min-height: 200px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px;
+  }
+  button {
+    width: 75%;
+    height: 40px;
+    background-color: white;
+    color: teal;
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: teal;
+      color: white;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import "./home.scss";
 import Header from "./Header";
 
 import Posts from "./Posts";
-import Sidebar from "../../components/navbar/Sidebar";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const Home = () => {
   return (

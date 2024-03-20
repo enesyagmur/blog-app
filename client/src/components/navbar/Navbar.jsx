@@ -21,7 +21,7 @@ const Navbar = () => {
         <p>HOME</p>
         <p>ABOUT</p>
         <p>CONTACT</p>
-        <p>WRITE</p>
+        <p onClick={() => navigate("/write")}>WRITE</p>
         <p>LOGOUT</p>
       </div>
       <div className="profile">
