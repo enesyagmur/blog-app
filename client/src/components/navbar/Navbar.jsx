@@ -5,8 +5,10 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { FaPinterestSquare } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="social-media">
@@ -27,6 +29,7 @@ const Navbar = () => {
         <img
           src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt=""
+          onClick={() => navigate("/account")}
         />
       </div>
     </div>
