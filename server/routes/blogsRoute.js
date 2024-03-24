@@ -1,4 +1,3 @@
-//routing : belli url adreslerine kullanıcıdan gelen istekleri ilgili fonksiyonlara yönlendirmeye yarar
 const express = require("express");
 const {
   blogCreate,

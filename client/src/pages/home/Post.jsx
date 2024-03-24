@@ -1,19 +1,14 @@
 import React from "react";
 import "./post.scss";
 
-const Post = ({ img }) => {
+const Post = ({ img, title, text, category, updateTime }) => {
   return (
     <div className="post">
       <img src={img} alt="" />
-      <p className="category">Müzik - Hayat</p>
-      <p className="title">Lorem ipsum dolor sit amet.</p>
-      <p className="time">1 saat önce</p>
-      <p className="detail">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-        expedita animi tempore unde consequuntur voluptatibus sunt sed minima
-        quis, odit inventore, explicabo nostrum delectus! Repellendus saepe hic
-        minima accusantium nisi!
-      </p>
+      <p className="category">{category}</p>
+      <p className="title">{title}</p>
+      <p className="time">{updateTime}</p>
+      <p className="detail">{text}</p>
     </div>
   );
 };

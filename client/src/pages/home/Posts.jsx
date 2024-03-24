@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./posts.scss";
 import Post from "./Post";
 
 const Posts = () => {
+  const [blogs, setBlogs] = useState();
+  const img =
+    "https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  const category = "Müzik - Hayat";
+
+  const takeBlogs = async () => {
+    const response = await fetch("api/notes");
+    const responseJson = await response.json();
+
+    if (response.ok) {
+      setBlogs(responseJson);
+    }
+  };
+  useEffect(() => {
+    takeBlogs();
+  }, []);
+
   return (
     <div className="posts">
-      <Post img="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      <Post img="https://images.pexels.com/photos/6758029/pexels-photo-6758029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-      <Post img="https://images.pexels.com/photos/6711867/pexels-photo-6711867.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      <Post img="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      <Post img="https://images.pexels.com/photos/4916559/pexels-photo-4916559.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      {blogs &&
+        blogs.map((blog) => (
+          <Post
+            key={blog._id}
+            img={img}
+            title={blog.title}
+            text={blog.text}
+            category={category}
+            updateTime={blog.updatedAt}
+          />
+        ))}
     </div>
   );
 };
