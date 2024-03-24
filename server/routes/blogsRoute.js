@@ -1,16 +1,17 @@
 //routing : belli url adreslerine kullanıcıdan gelen istekleri ilgili fonksiyonlara yönlendirmeye yarar
 const express = require("express");
+const { blogCreate } = require("../controllers/blogControllers");
 
 const router = express.Router();
 
-router.get("/");
+// router.get("/");
 
-router.get("/:id");
+// router.get("/:id");
 
-router.post("/");
+router.post("/", blogCreate);
 
-router.delete("/:id");
+// router.delete("/:id");
 
-router.patch("/:id");
+// router.patch("/:id");
 
 module.exports = router;

@@ -10,11 +10,6 @@ const blogSema = Sema(
       type: String,
       required: [true, "Metin zorunlu"],
     },
-
-    autherEmail: {
-      type: String,
-      required: true,
-    },
   },
   {
     timestamps: true,
