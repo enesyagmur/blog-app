@@ -1,1 +1,4 @@
-not controller oluşturma aşamasındayım
+durum : blog çekme işlemi yapıldı
+
+sırada : blog oluşturma
+blog şemasına kategori ekleme + yeni blog sayfasında kategori seçme alanı
