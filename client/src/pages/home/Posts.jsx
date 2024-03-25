@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./posts.scss";
 import Post from "./Post";
+import moment from "moment";
+import "moment/locale/tr";
 
 const Posts = () => {
   const [blogs, setBlogs] = useState();
@@ -29,7 +31,7 @@ const Posts = () => {
             category={blog.category}
             title={blog.title}
             text={blog.text}
-            updateTime={blog.updatedAt}
+            updateTime={moment(new Date(blog.createdAt)).fromNow()}
           />
         ))}
     </div>
