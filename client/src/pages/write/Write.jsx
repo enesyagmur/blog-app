@@ -13,7 +13,7 @@ const Write = () => {
   const [category, setCategory] = useState("");
 
   const createBlog = async () => {
-    const blog = { title, text };
+    const blog = { category, title, text };
 
     const response = await fetch("/api/notes", {
       method: "POST",
@@ -24,6 +24,7 @@ const Write = () => {
     if (response.ok) {
       setTitle("");
       setText("");
+      setCategory("");
       alert("Blog oluşturuldu");
     }
   };
@@ -45,6 +46,7 @@ const Write = () => {
           type="text"
           placeholder="Başlık"
           onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
         <div className="categories">
           <FaCode

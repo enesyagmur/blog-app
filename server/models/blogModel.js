@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const Sema = mongoose.Schema;
 const blogSema = Sema(
   {
+    category: {
+      type: String,
+      required: [true, "Kategori seçilmelidir"],
+    },
     title: {
       type: String,
       required: [true, "Başlık zorunlu"],
