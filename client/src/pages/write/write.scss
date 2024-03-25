@@ -27,13 +27,40 @@
     }
   }
 
-  .title {
+  .center-blog {
     width: 75%;
     height: 30px;
     margin-top: 20px;
-    border: none;
-    outline: none;
-    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      width: 80%;
+      height: 30px;
+      border: none;
+      outline: none;
+      font-size: 25px;
+    }
+
+    .categories {
+      width: 15%;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .icon {
+        color: gray;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+          color: lightcoral;
+        }
+      }
+      .this-category {
+        color: lightcoral;
+      }
+    }
   }
 
   textarea {
