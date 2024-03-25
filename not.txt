@@ -1,4 +1,9 @@
-durum : blog çekme işlemi yapıldı
+durum : blog çekme ve yeni blog oluşturma yapıldı
 
-sırada : blog oluşturma
-blog şemasına kategori ekleme + yeni blog sayfasında kategori seçme alanı
+yapılacaklar :
+güncelleme zamanını bölgeye göre gösterme
+blog silme
+blog güncelleme
+blog detay sayfası
+
+
