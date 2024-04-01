@@ -1,9 +1,8 @@
 durum : blog çekme ve yeni blog oluşturma yapıldı
 
 yapılacaklar :
-güncelleme zamanını bölgeye göre gösterme
+blog detay sayfası / bu sayfada postları çekerken hata alıyorum
 blog silme
 blog güncelleme
-blog detay sayfası
 
 
