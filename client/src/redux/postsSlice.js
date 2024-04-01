@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const postSlice = createSlice({
   name: "posts",
   initialState: {
-    postList: [454, 545],
+    postList: [],
   },
   reducers: {
     getPosts: (state, action) => {
-      state.postList = action.payload;
+      state.postList.push(action.payload);
     },
   },
 });

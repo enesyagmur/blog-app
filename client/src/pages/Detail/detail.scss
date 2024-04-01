@@ -1,0 +1,94 @@
+.detail {
+  width: 100%;
+  min-height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .blog {
+    width: 80%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .update-icon {
+      position: absolute;
+      color: teal;
+      background-color: white;
+      border-radius: 50%;
+      top: 230px;
+      right: 93%;
+      width: 55px;
+      height: 55px;
+
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
+    .delete-icon {
+      position: absolute;
+      color: lightcoral;
+      background-color: white;
+      border-radius: 50%;
+      top: 230px;
+      left: 93%;
+      width: 55px;
+      height: 55px;
+      transition: all 0.5s;
+
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .blog-info {
+      width: 100%;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .time {
+        width: 10%;
+        height: 20%;
+        text-align: center;
+        font-size: 10px;
+        color: gray;
+      }
+      .title {
+        width: 60%;
+        height: 20%;
+        text-align: center;
+        font-size: 30px;
+        word-spacing: 5px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+      .category {
+        width: 10%;
+        height: 20%;
+        text-align: center;
+        font-size: 10px;
+        color: gray;
+      }
+    }
+    .text {
+      width: 100%;
+      min-height: 300px;
+      margin-top: 50px;
+      line-height: 25px;
+    }
+  }
+}
