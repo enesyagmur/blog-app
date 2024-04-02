@@ -58,4 +58,23 @@ userSema.statics.signup = async function (name, email, password, image) {
   return newUser;
 };
 
+//giriş fonksiyonu
+userSema.statics.login = async function (email, password) {
+  if (!email || !password) {
+    throw Error("Bilgiler boş bırakılamaz");
+  }
+
+  const user = await this.findOne({ email });
+  if (!user) {
+    throw Error("Girilen email ile kayıtlı kullanıcı bulunamadı.");
+  }
+
+  const checkPassword = await bcrypt.compare(password, user.password);
+  if (checkPassword) {
+    throw Error("Parola hatalı.");
+  }
+
+  return user;
+};
+
 module.exports = mongoose.model("User", userSema);

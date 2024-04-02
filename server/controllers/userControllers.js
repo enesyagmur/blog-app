@@ -6,11 +6,19 @@ const createToken = (id) => {
 };
 
 const loginUser = async (req, res) => {
-  res.json({ message: "Login işlemi başarılı" });
+  const { email, password } = req.body;
+
+  try {
+    const user = await userModel.login(email, password);
+    const token = createToken(user._id);
+    res.status(200).json({ email, token });
+  } catch (error) {
+    res.status(400).json({ hata: error.message });
+  }
 };
 
 const signupUser = async (req, res) => {
-  const { name, email, password, image } = req.body; // istek body sinden gerekli bilgileri alıyoruz
+  const { name, email, password, image } = req.body;
 
   try {
     const user = await userModel.signup(name, email, password, image);
