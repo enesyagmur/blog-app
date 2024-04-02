@@ -1,6 +1,7 @@
 
 
 yapılacaklar :
+kayıt - giriş işlemleri
 resimleri db ye url ile değilde upload ederek yükleme
 
 

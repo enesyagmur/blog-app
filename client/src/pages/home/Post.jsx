@@ -19,7 +19,7 @@ const Post = ({ blog }) => {
         <p className="title">{blog.title}</p>
         <p className="time">{moment(new Date(blog.createdAt)).fromNow()}</p>
       </div>
-      <p className="detail">{blog.text.substring(0, 300) + "..."}</p>
+      <p className="post-detail">{blog.text.substring(0, 300) + "..."}</p>
     </div>
   );
 };
