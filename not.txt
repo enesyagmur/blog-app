@@ -1,8 +1,8 @@
-durum : blog çekme ve yeni blog oluşturma yapıldı
+
 
 yapılacaklar :
-blog detay sayfası / bu sayfada postları çekerken hata alıyorum
-blog silme
-blog güncelleme
+resimleri db ye url ile değilde upload ederek yükleme
+
+
 
 

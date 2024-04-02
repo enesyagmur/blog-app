@@ -11,9 +11,10 @@ const Write = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
 
   const createBlog = async () => {
-    const blog = { category, title, text };
+    const blog = { category, title, text, image };
 
     const response = await fetch("/api/notes", {
       method: "POST",
@@ -25,6 +26,7 @@ const Write = () => {
       setTitle("");
       setText("");
       setCategory("");
+      setImage("");
       alert("Blog oluşturuldu");
     }
   };
@@ -32,7 +34,6 @@ const Write = () => {
   return (
     <div className="write">
       <input type="file" id="image" style={{ display: "none" }} />
-
       <label htmlFor="image">
         <img
           src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -40,6 +41,7 @@ const Write = () => {
         />
         <GoPlusCircle className="icon" />
       </label>
+
       <div className="center-blog">
         <input
           className="title"
@@ -81,7 +83,13 @@ const Write = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       ></textarea>
-
+      <input
+        type="text"
+        className="image"
+        onChange={(e) => setImage(e.target.value)}
+        value={image}
+        placeholder="Resim url"
+      />
       <button onClick={createBlog}>Yayınla</button>
     </div>
   );

@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./post.scss";
 import moment from "moment";
 import "moment/locale/tr";
 import { useNavigate } from "react-router-dom";
 
-const Post = ({ id, img, title, text, category, createdTime }) => {
+const Post = ({ blog }) => {
   const navigate = useNavigate();
+
   return (
     <div className="post">
-      <img src={img} alt="" onClick={() => navigate(`/detail/${id}`)} />
-      <p className="category">{category}</p>
-      <p className="title">{title}</p>
-      <p className="time">{moment(new Date(createdTime)).fromNow()}</p>
-      <p className="detail">{text}</p>
+      <img
+        src={blog.image}
+        alt=""
+        onClick={() => navigate(`/detail/${blog._id}`)}
+      />
+      <div className="post-info">
+        <p className="category">{blog.category}</p>
+        <p className="title">{blog.title}</p>
+        <p className="time">{moment(new Date(blog.createdAt)).fromNow()}</p>
+      </div>
+      <p className="detail">{blog.text.substring(0, 300) + "..."}</p>
     </div>
   );
 };

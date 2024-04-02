@@ -14,6 +14,10 @@ const blogSema = Sema(
       type: String,
       required: [true, "Metin zorunlu"],
     },
+    image: {
+      type: String,
+      required: [true, "Resim zorunlu"],
+    },
   },
   {
     timestamps: true,

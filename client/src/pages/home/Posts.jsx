@@ -32,18 +32,7 @@ const Posts = () => {
 
   return (
     <div className="posts">
-      {blogs &&
-        blogs.map((blog) => (
-          <Post
-            key={blog._id}
-            id={blog._id}
-            img={img}
-            category={blog.category}
-            title={blog.title}
-            text={blog.text}
-            createdTime={blog.createdAt}
-          />
-        ))}
+      {blogs && blogs.map((blog) => <Post key={blog._id} blog={blog} />)}
     </div>
   );
 };

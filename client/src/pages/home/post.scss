@@ -12,29 +12,38 @@
     border-radius: 10px;
     object-fit: cover;
   }
-  .category {
-    width: 80%;
-    text-align: center;
-    font-size: 12px;
-    color: peachpuff;
-  }
-  .title {
-    width: 80%;
+  .post-info {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    font-size: 30px;
-    text-align: center;
-    font-weight: 300;
+    margin-top: 10px;
+    .category {
+      width: 15%;
+      text-align: center;
+      font-size: 12px;
+      color: peachpuff;
+    }
+    .title {
+      width: 60%;
+      font-size: 30px;
+      text-align: center;
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+    .time {
+      width: 15%;
+      text-align: center;
+      font-size: 12px;
+      color: grey;
+    }
   }
-  .time {
-    width: 80%;
 
-    text-align: center;
-    font-size: 12px;
-    color: grey;
-  }
   .detail {
-    width: 80%;
-
+    width: 90%;
+    height: 300px;
     color: gray;
     line-height: 25px;
   }
