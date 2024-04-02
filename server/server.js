@@ -2,6 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const blogsRoute = require("./routes/blogsRoute");
+const userRoute = require("./routes/userRoute");
 
 const app = express();
 
@@ -24,3 +25,4 @@ mongoose
   });
 
 app.use("/api/notes", blogsRoute);
+app.use("/api/user", userRoute);

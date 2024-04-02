@@ -10,6 +10,7 @@ const userSema = Sema({
   email: {
     type: String,
     required: [true, "Mail zorunlu"],
+    unique: [true, "Mail zaten kayıtlı"],
   },
   password: {
     type: String,

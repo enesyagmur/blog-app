@@ -44,7 +44,7 @@ const Detail = () => {
         <div className="blog">
           <PiPencilCircle className="update-icon" />
           <TiDeleteOutline className="delete-icon" onClick={deleteBlog} />
-          <img src={img} alt="" />
+          <img src={blog.image} alt="" />
           <div className="blog-info">
             <p className="time">{moment(new Date(blog.updatedAt)).fromNow()}</p>
             <p className="title">{blog.title}</p>
