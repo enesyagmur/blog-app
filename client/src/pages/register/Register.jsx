@@ -7,10 +7,13 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
+  const [hata, setHata] = useState(null);
+
   const navigate = useNavigate();
 
   const signupFunc = async (e) => {
     e.preventDefault();
+    setHata(null);
 
     const response = await fetch("/api/user/signup", {
       method: "POST",
@@ -21,11 +24,11 @@ const Register = () => {
     const responseJson = await response.json();
 
     if (!response.ok) {
-      console.log(responseJson.hata);
+      setHata(responseJson.hata);
     }
     if (response.ok) {
       alert("Kayıt başarılı");
-      navigate("/login");
+      navigate("/");
     }
   };
 
@@ -33,7 +36,6 @@ const Register = () => {
     <div className="register">
       <form onSubmit={signupFunc}>
         <p className="form-title">Kayıt</p>
-        <p className="form-title">Giriş</p>
         <label htmlFor="name">isim</label>
         <input
           type="text"
@@ -63,6 +65,7 @@ const Register = () => {
           onChange={(e) => setImage(e.target.value)}
         />
         <button type="submit">Kayıt</button>
+        {hata && <div className="error">{hata}</div>}
         <p className="go-register" onClick={() => navigate("/")}>
           Hesabım Var!
         </p>

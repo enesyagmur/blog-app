@@ -5,11 +5,13 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [hata, setHata] = useState(null);
 
   const navigate = useNavigate();
 
   const loginFunc = async (e) => {
     e.preventDefault();
+    setHata(null);
 
     const response = await fetch("/api/user/login", {
       method: "POST",
@@ -20,12 +22,12 @@ const Login = () => {
     const responseJson = await response.json();
 
     if (!response.ok) {
-      console.log(responseJson.hata);
+      setHata(responseJson.hata);
     }
 
     if (response.ok) {
       localStorage.setItem("user", JSON.stringify(responseJson));
-      navigate("/");
+      navigate("/home");
     }
   };
 
@@ -49,6 +51,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Giriş</button>
+        {hata && <div className="error">{hata}</div>}
         <p className="go-register" onClick={() => navigate("/register")}>
           Hesabım Yok!
         </p>

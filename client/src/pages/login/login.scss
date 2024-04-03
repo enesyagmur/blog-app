@@ -18,7 +18,7 @@
     flex-direction: column;
 
     width: 350px;
-    height: 340px;
+    min-height: 340px;
     .form-title {
       font-size: 45px;
     }
@@ -44,6 +44,16 @@
       background-color: lightcoral;
       color: white;
       cursor: pointer;
+    }
+    .error {
+      border: 1px solid lightcoral;
+      width: 100%;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: lightcoral;
+      border-radius: 10px;
     }
     .go-register {
       color: gray;

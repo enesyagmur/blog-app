@@ -15,7 +15,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const logoutFunc = () => {
-    navigate("/login");
+    localStorage.removeItem("user");
+    navigate("/");
   };
 
   return (
@@ -27,7 +28,7 @@ const Navbar = () => {
         <FaSquareTwitter className="social-media-icon" />
       </div>
       <div className="links">
-        <p onClick={() => navigate("/")}>HOME</p>
+        <p onClick={() => navigate("/home")}>HOME</p>
         <p>ABOUT</p>
         <p>CONTACT</p>
         <p onClick={() => navigate("/write")}>WRITE</p>
@@ -35,9 +36,9 @@ const Navbar = () => {
       </div>
       <div className="profile">
         <FaSearch className="search-icon" />
-        {currentUser.name ? <p className="name">{currentUser.name}</p> : null}
+        {currentUser ? <p className="name">{currentUser.name}</p> : null}
 
-        {currentUser.image ? (
+        {currentUser ? (
           <img
             src={currentUser.image}
             alt=""
