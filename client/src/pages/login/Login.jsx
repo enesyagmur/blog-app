@@ -24,7 +24,7 @@ const Login = () => {
     }
 
     if (response.ok) {
-      alert("giriş başarılı");
+      localStorage.setItem("user", JSON.stringify(responseJson));
       navigate("/");
     }
   };

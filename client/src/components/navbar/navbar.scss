@@ -32,13 +32,17 @@
     }
   }
   .profile {
-    width: 10%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-size: 20px;
     color: rgb(66, 65, 65);
+
+    .name {
+      text-transform: capitalize;
+    }
 
     img {
       width: 40px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.scss";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -8,6 +8,10 @@ import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
+
   const navigate = useNavigate();
 
   const logoutFunc = () => {
@@ -31,11 +35,15 @@ const Navbar = () => {
       </div>
       <div className="profile">
         <FaSearch className="search-icon" />
-        <img
-          src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt=""
-          onClick={() => navigate("/account")}
-        />
+        {currentUser.name ? <p className="name">{currentUser.name}</p> : null}
+
+        {currentUser.image ? (
+          <img
+            src={currentUser.image}
+            alt=""
+            onClick={() => navigate("/account")}
+          />
+        ) : null}
       </div>
     </div>
   );

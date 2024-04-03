@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.scss";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -6,14 +6,14 @@ import { FaPinterestSquare } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 
 const Sidebar = () => {
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
   return (
     <div className="sidebar">
       <div className="sidebar-main">
         <p className="title">HAKKIMDA</p>
-        <img
-          src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt=""
-        />
+        {currentUser.image ? <img src={currentUser.image} alt="" /> : null}
 
         <p className="explain">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
