@@ -14,10 +14,10 @@
   form {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
+    justify-content: space-between;
     width: 350px;
-    height: 400px;
+    height: 500px;
     .form-title {
       font-size: 45px;
     }

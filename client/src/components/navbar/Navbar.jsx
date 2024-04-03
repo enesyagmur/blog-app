@@ -9,6 +9,11 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const logoutFunc = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="navbar">
       <div className="social-media">
@@ -22,7 +27,7 @@ const Navbar = () => {
         <p>ABOUT</p>
         <p>CONTACT</p>
         <p onClick={() => navigate("/write")}>WRITE</p>
-        <p>LOGOUT</p>
+        <p onClick={logoutFunc}>LOGOUT</p>
       </div>
       <div className="profile">
         <FaSearch className="search-icon" />
