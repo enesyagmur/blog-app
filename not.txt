@@ -1,7 +1,7 @@
 
 
 yapılacaklar :
-kayıt - giriş işlemleri
+server tarafında kayıt - giriş işlemleri tamam sırada client tarafı var
 resimleri db ye url ile değilde upload ederek yükleme
 
 

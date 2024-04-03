@@ -70,7 +70,7 @@ userSema.statics.login = async function (email, password) {
   }
 
   const checkPassword = await bcrypt.compare(password, user.password);
-  if (checkPassword) {
+  if (!checkPassword) {
     throw Error("Parola hatalı.");
   }
 
