@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin: 10px;
   margin-left: 20px;
 
@@ -13,28 +14,52 @@
     border-radius: 10px;
     object-fit: cover;
   }
-  .post-info {
+
+  .title {
+    min-height: 60px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .more-info {
     width: 90%;
-    height: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px;
+    .author {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .author-name {
+        text-transform: capitalize;
+        font-size: 12px;
+        color: gray;
+      }
+    }
+
     .category {
-      width: 15%;
+      width: 30%;
       text-align: center;
       font-size: 12px;
       color: peachpuff;
     }
-    .title {
-      width: 60%;
-      font-size: 30px;
-      text-align: center;
-      font-weight: 300;
-      text-transform: capitalize;
-    }
+
     .time {
-      width: 15%;
+      width: 30%;
       text-align: center;
       font-size: 12px;
       color: grey;

@@ -10,17 +10,24 @@ const Post = ({ blog }) => {
   return (
     <div className="post">
       <img src={blog.image} alt="" />
-      <div className="post-info">
-        <p className="category">{blog.category}</p>
-        <p className="title">{blog.title}</p>
-        <p className="time">{moment(new Date(blog.createdAt)).fromNow()}</p>
-      </div>
+
+      <p className="title">{blog.title}</p>
+
       <p
         className="post-detail"
         onClick={() => navigate(`/detail/${blog._id}`)}
       >
         {blog.text.substring(0, 300) + "..."}{" "}
       </p>
+      <div className="more-info">
+        <div className="author">
+          <img src={blog.authorImage} alt="" />
+          <p className="author-name">{blog.authorName}</p>
+        </div>
+
+        <p className="category">{blog.category}</p>
+        <p className="time">{moment(new Date(blog.createdAt)).fromNow()}</p>
+      </div>
     </div>
   );
 };
