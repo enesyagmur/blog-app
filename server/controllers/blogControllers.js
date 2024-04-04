@@ -19,9 +19,18 @@ const blogGet = async (req, res) => {
   return res.status(200).json(blog);
 };
 const blogCreate = async (req, res) => {
-  const { category, title, text, image } = req.body;
+  const { category, title, text, image, authorName, authorEmail, authorImage } =
+    req.body;
   try {
-    const newBlog = await blogModel.create({ category, title, text, image });
+    const newBlog = await blogModel.create({
+      category,
+      title,
+      text,
+      image,
+      authorName,
+      authorEmail,
+      authorImage,
+    });
     res.status(200).json(newBlog);
   } catch (error) {
     res.status(400).json({ hata: "Blog oluşturma hatası:" + error.message });

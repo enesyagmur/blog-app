@@ -12,9 +12,20 @@ const Write = () => {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
 
   const createBlog = async () => {
-    const blog = { category, title, text, image };
+    const blog = {
+      category,
+      title,
+      text,
+      image,
+      authorName: currentUser.name,
+      authorEmail: currentUser.email,
+      authorImage: currentUser.image,
+    };
 
     const response = await fetch("/api/notes", {
       method: "POST",
@@ -29,6 +40,8 @@ const Write = () => {
       setImage("");
       alert("Blog oluşturuldu");
     }
+
+    console.log(blog);
   };
 
   return (

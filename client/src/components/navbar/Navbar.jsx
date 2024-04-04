@@ -16,7 +16,9 @@ const Navbar = () => {
 
   const logoutFunc = () => {
     localStorage.removeItem("user");
+
     navigate("/");
+    window.location.reload();
   };
 
   return (

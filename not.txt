@@ -1,8 +1,10 @@
 
 
 yapılacaklar :
-server tarafında kayıt - giriş işlemleri tamam sırada client tarafı var
-resimleri db ye url ile değilde upload ederek yükleme
+not oluştururken yazar bilgilerini de ekleme
+sadece not sahibine not güncelleme ve silme yetkisi
+sşifremi unuttum işlemi
+resimleri db ye url ile değilde upload ederek yükleme - bulamadım
 
 
 

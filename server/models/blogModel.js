@@ -18,6 +18,18 @@ const blogSema = Sema(
       type: String,
       required: [true, "Resim zorunlu"],
     },
+    authorName: {
+      type: String,
+      required: true,
+    },
+    authorEmail: {
+      type: String,
+      required: true,
+    },
+    authorImage: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
