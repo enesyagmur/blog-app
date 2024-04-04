@@ -1,0 +1,45 @@
+.update-blog {
+  width: 100%;
+  min-height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  .title {
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  textarea {
+    width: 75%;
+    margin-top: 10px;
+    min-height: 200px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px;
+  }
+
+  button {
+    width: 75%;
+    height: 40px;
+    background-color: white;
+    color: teal;
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: teal;
+      color: white;
+    }
+  }
+}

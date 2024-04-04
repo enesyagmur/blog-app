@@ -1,9 +1,8 @@
 
 
 yapılacaklar :
-not oluştururken yazar bilgilerini de ekleme
-sadece not sahibine not güncelleme ve silme yetkisi
-sşifremi unuttum işlemi
+not güncelleme
+şifremi unuttum işlemi
 resimleri db ye url ile değilde upload ederek yükleme - bulamadım
 
 

@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { json, useNavigate, useParams } from "react-router-dom";
 import "./detail.scss";
 import moment from "moment";
 import { TiDeleteOutline } from "react-icons/ti";
 import { PiPencilCircle } from "react-icons/pi";
+import UpdateBlog from "./UpdateBlog";
 
 const Detail = () => {
-  const [blog, setBlog] = useState("asd");
+  const [blog, setBlog] = useState();
+  const [blogUpdateCheck, setBlogUpdateCheck] = useState(false);
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
   const { id } = useParams();
   const navigate = useNavigate();
   const img =
@@ -28,7 +33,7 @@ const Detail = () => {
     });
 
     if (response.ok) {
-      navigate("/");
+      navigate("/home");
     } else {
       console.log(response.hata);
     }
@@ -38,23 +43,52 @@ const Detail = () => {
     getBlog();
   }, []);
 
-  return (
-    <div className="detail">
-      {blog && (
-        <div className="blog">
-          <PiPencilCircle className="update-icon" />
-          <TiDeleteOutline className="delete-icon" onClick={deleteBlog} />
-          <img src={blog.image} alt="" />
-          <div className="blog-info">
-            <p className="time">{moment(new Date(blog.updatedAt)).fromNow()}</p>
+  useEffect(() => {
+    if (blogUpdateCheck === false) {
+      getBlog();
+    }
+  }, [blogUpdateCheck]);
+
+  if (!blogUpdateCheck) {
+    return (
+      <div className="detail">
+        {blog && (
+          <div className="blog">
+            {currentUser.email === blog.authorEmail ? (
+              <>
+                <PiPencilCircle
+                  className="update-icon"
+                  onClick={() => setBlogUpdateCheck(true)}
+                />
+                <TiDeleteOutline className="delete-icon" onClick={deleteBlog} />
+              </>
+            ) : null}
+
+            <img src={blog.image} alt="" />
             <p className="title">{blog.title}</p>
-            <p className="category">{blog.category} </p>
+
+            <p className="text">{blog.text}</p>
+            <div className="blog-info">
+              <div className="author">
+                <img src={blog.authorImage} alt="" />
+                <p className="author-name">{blog.authorName}</p>
+              </div>
+              <p className="time">
+                {moment(new Date(blog.updatedAt)).fromNow()}
+              </p>
+              <p className="category">{blog.category} </p>
+            </div>
           </div>
-          <p className="text">{blog.text}</p>
-        </div>
-      )}
-    </div>
-  );
+        )}
+      </div>
+    );
+  } else {
+    return (
+      <div className="detail">
+        <UpdateBlog blog={blog} setBlogUpdateCheck={setBlogUpdateCheck} />
+      </div>
+    );
+  }
 };
 
 export default Detail;
