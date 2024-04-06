@@ -1,8 +1,11 @@
 
+şu an :  blog arama işlemindeyim hem görsel hem arama düzgün değil
 
 yapılacaklar :
-not güncelleme
-şifremi unuttum işlemi
+profil güncelleme işlemi
+
+blog arama sonuçlarına tıklayınca o bloğun detay sayfasına gitme
+şifremi unuttum işlemi - yapamadım
 resimleri db ye url ile değilde upload ederek yükleme - bulamadım
 
 

@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 10px;
   margin-left: 20px;
+  &:hover {
+    background-color: #fdfbfb;
+  }
 
   img {
     width: 100%;

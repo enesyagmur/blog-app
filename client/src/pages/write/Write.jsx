@@ -73,16 +73,16 @@ const Write = () => {
             onClick={() => setCategory("müzik")}
           />
           <IoIosFitness
-            className={category === "spor" ? "this-category" : "icon"}
-            onClick={() => setCategory("spor")}
+            className={category === "sağlık" ? "this-category" : "icon"}
+            onClick={() => setCategory("sağlık")}
           />
           <IoAirplaneOutline
             className={category === "seyahat" ? "this-category" : "icon"}
             onClick={() => setCategory("seyahat")}
           />
           <IoFastFoodOutline
-            className={category === "yemek" ? "this-category" : "icon"}
-            onClick={() => setCategory("yemek")}
+            className={category === "eğlence" ? "this-category" : "icon"}
+            onClick={() => setCategory("eğlence")}
           />
         </div>
       </div>

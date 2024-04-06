@@ -4,8 +4,9 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaPinterestSquare } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
+import Searchbar from "./Searchbar";
 
 const Navbar = () => {
   const [currentUser, setCurrentUser] = useState(
@@ -36,8 +37,8 @@ const Navbar = () => {
         <p onClick={() => navigate("/write")}>WRITE</p>
         <p onClick={logoutFunc}>LOGOUT</p>
       </div>
+      <Searchbar />
       <div className="profile">
-        <FaSearch className="search-icon" />
         {currentUser ? <p className="name">{currentUser.name}</p> : null}
 
         {currentUser ? (

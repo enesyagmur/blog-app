@@ -17,7 +17,7 @@ const Post = ({ blog }) => {
         className="post-detail"
         onClick={() => navigate(`/detail/${blog._id}`)}
       >
-        {blog.text.substring(0, 300) + "..."}{" "}
+        {blog.text.substring(0, 300) + "..."}
       </p>
       <div className="more-info">
         <div className="author">
