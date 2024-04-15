@@ -77,4 +77,6 @@ userSema.statics.login = async function (email, password) {
   return user;
 };
 
+//update fonksiyonu
+
 module.exports = mongoose.model("User", userSema);

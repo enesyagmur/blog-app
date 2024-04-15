@@ -1,12 +1,13 @@
 
-şu an :  blog arama işlemindeyim hem görsel hem arama düzgün değil
+
 
 yapılacaklar :
+kategorilere tıklayınca ana sayfayı ona göre filitreleme  // home a gidince postları getirmiyor
 profil güncelleme işlemi
-
+resimleri db ye url ile değilde upload ederek yükleme - bulamadım
 blog arama sonuçlarına tıklayınca o bloğun detay sayfasına gitme
 şifremi unuttum işlemi - yapamadım
-resimleri db ye url ile değilde upload ederek yükleme - bulamadım
+
 
 
 

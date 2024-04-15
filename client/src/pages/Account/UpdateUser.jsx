@@ -10,7 +10,7 @@ const UpdateUser = () => {
         <p>Profil Resmi</p>
         <ImImages className="icon" />
       </label>
-      <input type="file" id="image" style={{ display: "none" }} />
+      {/* <input type="file" id="image" style={{ display: "none" }} /> */}
       <label htmlFor="user">Kullanıcı</label>
       <input type="text" id="user" />
       <label htmlFor="email">Email</label>

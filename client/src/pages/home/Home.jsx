@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import "./home.scss";
 import Header from "./Header";
 
@@ -10,14 +12,14 @@ const Home = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("user"))
   );
+  const { category } = useParams();
   const navigate = useNavigate();
-
   if (currentUser) {
     return (
       <div className="home">
         <Header />
         <div className="home-main">
-          <Posts />
+          <Posts category={category} />
           <Sidebar />
         </div>
       </div>

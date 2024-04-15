@@ -4,21 +4,40 @@ import Post from "./Post";
 import { useDispatch } from "react-redux";
 import { getPosts } from "../../redux/postsSlice";
 
-const Posts = () => {
+const Posts = ({ category }) => {
   const [blogs, setBlogs] = useState();
   const dispatch = useDispatch();
 
   const takeBlogs = async () => {
-    const response = await fetch("api/notes");
+    const response = await fetch("/api/notes");
     const responseJson = await response.json();
-
     if (response.ok) {
       setBlogs(responseJson);
     }
   };
+
+  const filteredBlogs = async () => {
+    const response = await fetch("/api/notes");
+    const responseJson = await response.json();
+
+    if (response.ok) {
+      const newArray = responseJson.filter(
+        (blog) => blog.category === category
+      );
+      if (newArray) {
+        setBlogs(newArray);
+      } else {
+        setBlogs(null);
+      }
+    }
+  };
   useEffect(() => {
-    takeBlogs();
-  }, []);
+    if (category === "all") {
+      takeBlogs();
+    } else {
+      filteredBlogs();
+    }
+  }, [category]);
 
   useEffect(() => {
     if (blogs) {
