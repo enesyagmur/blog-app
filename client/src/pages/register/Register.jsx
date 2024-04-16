@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./register.scss";
 import { useNavigate } from "react-router-dom";
+import FileBase from "react-file-base64";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -10,7 +11,6 @@ const Register = () => {
   const [hata, setHata] = useState(null);
 
   const navigate = useNavigate();
-
   const signupFunc = async (e) => {
     e.preventDefault();
     setHata(null);
@@ -58,11 +58,11 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <label htmlFor="image">Resim</label>
-        <input
-          type="text"
-          id="image"
-          placeholder="Url giriniz..."
-          onChange={(e) => setImage(e.target.value)}
+
+        <FileBase
+          type="file"
+          multiple={false}
+          onDone={({ base64 }) => setImage(base64)}
         />
         <button type="submit">Kayıt</button>
         {hata && <div className="error">{hata}</div>}
