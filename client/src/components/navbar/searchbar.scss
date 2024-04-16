@@ -1,5 +1,5 @@
 .searchbar {
-  width: 15%;
+  width: 18%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -16,24 +16,5 @@
   .search-icon {
     position: absolute;
     left: 90%;
-  }
-  .found-blogs {
-    width: 100%;
-    min-height: 35px;
-    position: absolute;
-    top: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-      width: 100%;
-      height: 35px;
-      background-color: #fdfbfb;
-      margin-top: 5px;
-      &:hover {
-        background-color: gray;
-      }
-    }
   }
 }

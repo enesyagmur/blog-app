@@ -27,8 +27,8 @@ const Login = () => {
 
     if (response.ok) {
       localStorage.setItem("user", JSON.stringify(responseJson));
-      const category = "all";
-      navigate(`/home/${category}`);
+
+      navigate(`/home/all`);
       window.location.reload();
     }
   };

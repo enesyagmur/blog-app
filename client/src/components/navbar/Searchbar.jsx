@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./searchbar.scss";
 import { LiaSearchSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
+import FoundBlogs from "./FoundBlogs";
 
 const Searchbar = () => {
   const [text, setText] = useState("");
   const [foundBlogs, setFoundBlogs] = useState();
-  const navigate = useNavigate();
 
   const searchBlogs = async () => {
     if (text) {
@@ -15,7 +15,7 @@ const Searchbar = () => {
 
       if (response.ok) {
         const found = responseJson.filter((blog) =>
-          blog.title.includes(text.toLowerCase())
+          blog.title.toLowerCase().includes(text.toLowerCase())
         );
         if (found) {
           setFoundBlogs(found);
@@ -26,11 +26,6 @@ const Searchbar = () => {
     } else {
       setFoundBlogs(null);
     }
-  };
-
-  const goDetailFunc = () => {
-    // navigate(`/detail/${id}`);
-    console.log("tıkla");
   };
 
   useEffect(() => {
@@ -44,15 +39,11 @@ const Searchbar = () => {
         onChange={(e) => setText(e.target.value)}
         value={text}
       />
-      {foundBlogs && (
-        <div className="found-blogs">
-          {foundBlogs.map((blog) => (
-            <p key={blog._id} onClick={goDetailFunc}>
-              {blog.title}
-            </p>
-          ))}
-        </div>
-      )}
+      <FoundBlogs
+        foundBlogs={foundBlogs}
+        setFoundBlogs={setFoundBlogs}
+        setText={setText}
+      />
 
       <LiaSearchSolid className="search-icon" />
     </div>

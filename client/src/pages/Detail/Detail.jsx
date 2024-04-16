@@ -41,7 +41,7 @@ const Detail = () => {
 
   useEffect(() => {
     getBlog();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (blogUpdateCheck === false) {

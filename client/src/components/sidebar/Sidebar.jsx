@@ -11,14 +11,6 @@ const Sidebar = () => {
     JSON.parse(localStorage.getItem("user"))
   );
 
-  const music = "müzik";
-  const sport = "spor";
-  const enjoy = "eğlence";
-  const food = "yemek";
-  const travel = "seyahat";
-  const technology = "teknoloji";
-  const design = "tasarım";
-
   const navigate = useNavigate();
 
   return (
@@ -34,13 +26,14 @@ const Sidebar = () => {
         </p>
         <p className="title">KATEGORİLER</p>
         <div className="categories">
-          <p onClick={() => navigate(`/home/${music}`)}>Müzik</p>
-          <p onClick={() => navigate(`/home/${technology}`)}>Teknoloji</p>
-          <p onClick={() => navigate(`/home/${sport}`)}>Spor</p>
-          <p onClick={() => navigate(`/home/${design}`)}>Tasarım</p>
-          <p onClick={() => navigate(`/home/${food}`)}>Yemek</p>
-          <p onClick={() => navigate(`/home/${travel}`)}>Seyahat</p>
-          <p onClick={() => navigate(`/home/${enjoy}`)}>Eğlence</p>
+          <p onClick={() => navigate(`/home/müzik`)}>Müzik</p>
+          <p onClick={() => navigate(`/home/teknoloji`)}>Teknoloji</p>
+          <p onClick={() => navigate(`/home/spor`)}>Spor</p>
+          <p onClick={() => navigate(`/home/tasarım`)}>Tasarım</p>
+          <p onClick={() => navigate(`/home/yemek`)}>Yemek</p>
+          <p onClick={() => navigate(`/home/seyahat`)}>Seyahat</p>
+          <p onClick={() => navigate(`/home/eğlence`)}>Eğlence</p>
+          <p onClick={() => navigate(`/home/all`)}>Tüm Kategoriler</p>
         </div>
         <p className="title">SOSYAL MEDYA</p>
         <div className="social-media">

@@ -31,7 +31,7 @@ const Navbar = () => {
         <FaSquareTwitter className="social-media-icon" />
       </div>
       <div className="links">
-        <p onClick={() => navigate("/home")}>HOME</p>
+        <p onClick={() => navigate("/home/all")}>HOME</p>
         <p>ABOUT</p>
         <p>CONTACT</p>
         <p onClick={() => navigate("/write")}>WRITE</p>

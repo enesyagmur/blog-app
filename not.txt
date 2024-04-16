@@ -2,10 +2,9 @@
 
 
 yapılacaklar :
-kategorilere tıklayınca ana sayfayı ona göre filitreleme  // home a gidince postları getirmiyor
+blog arama sonuçlarına tıklayınca o bloğun detay sayfasına gitme / çıkan bloglar absolute oldugundan gözükmüyor yapılan aramayı anlık olarak redux a kaydedicem ve found blogs u ayrı bir component yapıp redux değerine göre açıp kapatıcam
 profil güncelleme işlemi
 resimleri db ye url ile değilde upload ederek yükleme - bulamadım
-blog arama sonuçlarına tıklayınca o bloğun detay sayfasına gitme
 şifremi unuttum işlemi - yapamadım
 
 
