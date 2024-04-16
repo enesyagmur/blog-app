@@ -5,7 +5,7 @@ yapılacaklar :
 resimleri db ye url ile değilde upload ederek yükleme - bulamadım
 profil güncelleme işlemi
 şifremi unuttum işlemi - yapamadım
-
+verileri yklerken birden fazla state kullanmak yerine bir state objesi kullanıcam
 
 
 

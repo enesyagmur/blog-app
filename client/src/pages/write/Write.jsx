@@ -6,12 +6,15 @@ import { IoIosFitness } from "react-icons/io";
 import { FaCode } from "react-icons/fa6";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { IoFastFoodOutline } from "react-icons/io5";
+import FileBase from "react-file-base64";
 
 const Write = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(
+    "https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  );
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("user"))
   );
@@ -37,22 +40,22 @@ const Write = () => {
       setTitle("");
       setText("");
       setCategory("");
-      setImage("");
+      setImage(
+        "https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      );
       alert("Blog oluşturuldu");
     }
-
-    console.log(blog);
   };
 
   return (
     <div className="write">
-      <input type="file" id="image" style={{ display: "none" }} />
       <label htmlFor="image">
-        <img
-          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt=""
+        <img src={image} alt="" />
+        <FileBase
+          type="file"
+          multiple={false}
+          onDone={({ base64 }) => setImage(base64)}
         />
-        <GoPlusCircle className="icon" />
       </label>
 
       <div className="center-blog">
@@ -96,13 +99,7 @@ const Write = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       ></textarea>
-      <input
-        type="text"
-        className="image"
-        onChange={(e) => setImage(e.target.value)}
-        value={image}
-        placeholder="Resim url"
-      />
+
       <button onClick={createBlog}>Yayınla</button>
     </div>
   );
