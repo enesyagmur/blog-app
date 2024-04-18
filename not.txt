@@ -2,10 +2,12 @@
 
 
 yapılacaklar :
-resimleri db ye url ile değilde upload ederek yükleme - bulamadım
+register form style ını düzeltiyorum
 profil güncelleme işlemi
 şifremi unuttum işlemi - yapamadım
-verileri yklerken birden fazla state kullanmak yerine bir state objesi kullanıcam
+verileri yüklerken birden fazla state kullanmak yerine bir state objesi kullanıcam
+girişte ve çıkışta sayfa yenilemeyi kaldırma
+birden fazla blog sayfası oluşturma
 
 
 

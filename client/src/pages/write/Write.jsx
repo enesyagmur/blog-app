@@ -49,7 +49,7 @@ const Write = () => {
 
   return (
     <div className="write">
-      <label htmlFor="image">
+      <label>
         <img src={image} alt="" />
         <FileBase
           type="file"

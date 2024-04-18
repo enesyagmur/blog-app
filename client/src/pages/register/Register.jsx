@@ -36,34 +36,51 @@ const Register = () => {
     <div className="register">
       <form onSubmit={signupFunc}>
         <p className="form-title">Kayıt</p>
-        <label htmlFor="name">isim</label>
+        <label htmlFor="name" className="input-title">
+          isim
+        </label>
         <input
+          className="form-input"
           type="text"
           id="name"
           placeholder="İsim giriniz..."
           onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" className="input-title">
+          Email
+        </label>
         <input
+          className="form-input"
           type="email"
           id="email"
           placeholder="Mail giriniz..."
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="password">Şifre</label>
+        <label htmlFor="password" className="input-title">
+          Şifre
+        </label>
         <input
+          className="form-input"
           type="password"
           id="password"
           placeholder="Şifre giriniz..."
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label htmlFor="image">Resim</label>
+        <label htmlFor="image" className="form-input">
+          Resim
+        </label>
 
-        <FileBase
-          type="file"
-          multiple={false}
-          onDone={({ base64 }) => setImage(base64)}
-        />
+        <label className="image-label">
+          <img
+            src="https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <FileBase
+            type="file"
+            multiple={false}
+            onDone={({ base64 }) => setImage(base64)}
+          />
+        </label>
         <button type="submit">Kayıt</button>
         {hata && <div className="error">{hata}</div>}
         <p className="go-register" onClick={() => navigate("/")}>
