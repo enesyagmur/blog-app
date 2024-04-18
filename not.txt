@@ -2,7 +2,7 @@
 
 
 yapılacaklar :
-register form style ını düzeltiyorum
+
 profil güncelleme işlemi
 şifremi unuttum işlemi - yapamadım
 verileri yüklerken birden fazla state kullanmak yerine bir state objesi kullanıcam
