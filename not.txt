@@ -2,12 +2,12 @@
 
 
 yapılacaklar :
-projeyi live a alma
 şifremi unuttum işlemi - yapamadım
+
 verileri yüklerken birden fazla state kullanmak yerine bir state objesi kullanıcam
 girişte ve çıkışta sayfa yenilemeyi kaldırma
 birden fazla blog sayfası oluşturma
-
+projeyi live a alma
 
 
 
