@@ -41,13 +41,7 @@ const Navbar = () => {
       <div className="profile">
         {currentUser ? <p className="name">{currentUser.name}</p> : null}
 
-        {currentUser ? (
-          <img
-            src={currentUser.image}
-            alt=""
-            onClick={() => navigate("/account")}
-          />
-        ) : null}
+        {currentUser ? <img src={currentUser.image} alt="" /> : null}
       </div>
     </div>
   );

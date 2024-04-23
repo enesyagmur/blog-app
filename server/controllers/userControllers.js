@@ -31,22 +31,7 @@ const signupUser = async (req, res) => {
   }
 };
 
-const userUpdate = async (req, res) => {
-  const user = await userModel.findOneAndUpdate(
-    { email: email },
-    {
-      ...req.body,
-    },
-    { new: true }
-  );
-  if (!user) {
-    res.status(404).json({ hata: "Kullanıc bulunamadı" });
-  }
-  res.status(200).json(user);
-};
-
 module.exports = {
   loginUser,
   signupUser,
-  userUpdate,
 };
